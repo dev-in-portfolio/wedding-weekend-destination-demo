@@ -1,0 +1,233 @@
+/* Multi-Event RSVP Form */
+.rsvp-wrapper {
+  max-width: 780px;
+  margin: 0 auto;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: clamp(1.75rem, 4vw, 3rem);
+  box-shadow: var(--shadow-md);
+}
+
+.rsvp-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.rsvp-deadline-badge {
+  display: inline-block;
+  background-color: var(--accent-light);
+  color: var(--accent-primary);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.75rem;
+}
+
+.rsvp-status-alert {
+  background-color: #FEF2F2;
+  border-left: 4px solid #DC2626;
+  color: #991B1B;
+  padding: 0.875rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.rsvp-status-alert[hidden] {
+  display: none;
+}
+
+.rsvp-fieldset {
+  border: none;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+
+.rsvp-legend {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  display: block;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.5rem;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.form-label .required {
+  color: #DC2626;
+  margin-left: 0.2rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(184, 107, 79, 0.18);
+}
+
+.form-control.has-error,
+.form-control[aria-invalid="true"] {
+  border-color: #DC2626 !important;
+  background-color: #FFFDFD;
+}
+
+.error-message {
+  display: block;
+  font-size: 0.8125rem;
+  color: #DC2626;
+  font-weight: 600;
+  margin-top: 0.35rem;
+}
+
+.error-message[hidden] {
+  display: none;
+}
+
+/* Radio Group Cards */
+.radio-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.radio-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-alt);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  gap: 0.75rem;
+}
+
+.radio-card:hover {
+  background-color: var(--bg-muted);
+}
+
+.radio-card input[type="radio"] {
+  accent-color: var(--accent-primary);
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.radio-card-label {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Checkbox Cards for Events */
+.checkbox-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checkbox-card {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-alt);
+  cursor: pointer;
+  gap: 0.75rem;
+  transition: all var(--transition-fast);
+}
+
+.checkbox-card:hover {
+  background-color: var(--bg-muted);
+}
+
+.checkbox-card input[type="checkbox"] {
+  accent-color: var(--accent-primary);
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-top: 0.2rem;
+}
+
+.checkbox-card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-card-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.checkbox-card-sub {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+/* Subsections & Nested Details */
+.nested-details-box {
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent-primary);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+  margin-top: 0.75rem;
+}
+
+.nested-details-box[hidden] {
+  display: none !important;
+}
+
+.rsvp-submit-group {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.rsvp-notice-footnote {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+}

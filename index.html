@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en" data-style="mediterranean-minimal">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amara &amp; Luca &middot; Wedding Weekend Destination Demo &middot; DSCG</title>
+  <meta name="description" content="Customer-facing sales demo of Dark Star Consulting Group's &#9733;&#9733;&#9733; Wedding Weekend / Destination package ($1,195), featuring Amara Singh &amp; Luca Moretti in Mallorca, Spain.">
+
+  <!-- Google Fonts: Editorial Serifs & Modern Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400&family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
+  <link rel="stylesheet" href="./src/styles/base.css">
+  <link rel="stylesheet" href="./src/styles/components.css">
+  <link rel="stylesheet" href="./src/styles/rsvp.css">
+  <link rel="stylesheet" href="./src/styles/themes.css">
+
+  <!-- Application Script (ES Module) -->
+  <script type="module" src="./src/scripts/main.js"></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- 1. Top Demonstration & Style Switcher Bar -->
+  <aside class="demo-top-bar" aria-label="DSCG Demonstration Bar">
+    <div class="demo-top-bar-inner">
+      <div class="demo-bar-badge-group">
+        <span class="demo-badge-pill">DSCG Demo</span>
+        <span class="demo-tier-label">
+          <span class="demo-tier-stars">&#9733;&#9733;&#9733;</span> Wedding Weekend / Destination &middot; $1,195
+        </span>
+      </div>
+
+      <div class="demo-style-switcher" role="region" aria-label="Visual Style Switcher">
+        <span class="style-switcher-label">Direction:</span>
+        <div class="style-pills">
+          <button type="button" class="style-pill-btn active" data-set-style="mediterranean-minimal" aria-pressed="true">1. Minimal</button>
+          <button type="button" class="style-pill-btn" data-set-style="resort-cinematic" aria-pressed="false">2. Cinematic</button>
+          <button type="button" class="style-pill-btn" data-set-style="sun-washed-organic" aria-pressed="false">3. Organic</button>
+          <button type="button" class="style-pill-btn" data-set-style="european-editorial" aria-pressed="false">4. Editorial</button>
+          <button type="button" class="style-pill-btn" data-set-style="night-before-after" aria-pressed="false">5. Weekend</button>
+        </div>
+        <select class="style-select-dropdown" aria-label="Choose visual direction">
+          <option value="mediterranean-minimal">1. Mediterranean Minimal</option>
+          <option value="resort-cinematic">2. Resort Cinematic</option>
+          <option value="sun-washed-organic">3. Sun-Washed Organic</option>
+          <option value="european-editorial">4. European Editorial</option>
+          <option value="night-before-after">5. Night-Before-After</option>
+        </select>
+      </div>
+
+      <a href="https://dscg-wedding-portal.netlify.app" class="demo-portal-return" target="_blank" rel="noopener">
+        &larr; Return to DSCG Wedding Portal
+      </a>
+    </div>
+  </aside>
+
+  <!-- 2. Header & Main Navigation -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#hero" class="header-brand">
+        <span class="brand-names">Amara &amp; Luca</span>
+        <span class="brand-location">Casa Solenne &middot; Mallorca</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="#overview" class="nav-link">Overview</a>
+        <a href="#itinerary" class="nav-link">Itinerary</a>
+        <a href="#guide" class="nav-link">Mallorca Guide</a>
+        <a href="#travel" class="nav-link">Travel &amp; Stay</a>
+        <a href="#spaces" class="nav-link">The Estate</a>
+        <a href="#party" class="nav-link">Wedding Party</a>
+        <a href="#registry" class="nav-link">Registry</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#rsvp" class="nav-link nav-cta">RSVP</a>
+      </nav>
+
+      <button type="button" class="mobile-menu-toggle" data-drawer-toggle aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open Navigation Menu">
+        &#9776;
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div>
+      <div class="drawer-header">
+        <span class="brand-names">Amara &amp; Luca</span>
+        <button type="button" class="drawer-close" data-drawer-close aria-label="Close navigation">&times;</button>
+      </div>
+      <nav class="drawer-nav">
+        <a href="#overview">Weekend Overview</a>
+        <a href="#itinerary">3-Day Itinerary</a>
+        <a href="#guide">Mallorca Guide</a>
+        <a href="#travel">Travel Logistics</a>
+        <a href="#hotels">Accommodations</a>
+        <a href="#transport">Shuttles</a>
+        <a href="#spaces">Casa Solenne Grounds</a>
+        <a href="#party">Wedding Party</a>
+        <a href="#rsvp">Weekend RSVP</a>
+        <a href="#registry">Gift Funds</a>
+        <a href="#faq">Frequently Asked Questions</a>
+        <a href="#gallery">Photo Gallery</a>
+        <a href="#enhancements">Enhancement Previews</a>
+      </nav>
+    </div>
+    <div class="drawer-footer">
+      <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 0.75rem;">DSCG &#9733;&#9733;&#9733; Destination Demo</p>
+      <a href="https://dscg-wedding-portal.netlify.app" class="btn btn-outline btn-sm" style="width: 100%;">Return to Portal</a>
+    </div>
+  </div>
+  <div class="drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Main Content Area -->
+  <main id="main-content">
+
+    <!-- 3. Hero Section -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-monogram" aria-hidden="true">A &amp; L</div>
+          <h1 id="hero-title" class="hero-names">Amara Singh &amp; Luca Moretti</h1>
+          <p class="hero-subtitle">A Mediterranean Wedding Weekend</p>
+
+          <div class="hero-meta-box">
+            <div class="hero-meta-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span><strong>Friday, September 17 &ndash; Sunday, September 19, 2027</strong></span>
+            </div>
+            <div class="hero-meta-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Casa Solenne &middot; North Coast &middot; Mallorca, Spain</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#itinerary" class="btn btn-primary">Explore Itinerary</a>
+            <a href="#rsvp" class="btn btn-outline">Weekend RSVP</a>
+            <a href="#travel" class="btn btn-outline">Travel &amp; Stay</a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-image-frame">
+            <img src="./assets/images/hero-default.jpg" alt="Amara Singh and Luca Moretti embracing on the cliffside stone terrace at Casa Solenne overlooking the Balearic Sea in Mallorca" width="1264" height="848">
+            <div class="hero-tagline-badge">Casa Solenne &middot; North Coast Mallorca</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Weekend Overview & Personal Welcome Note -->
+    <section id="overview" class="section" aria-labelledby="overview-heading">
+      <div class="container">
+        <div class="overview-card">
+          <div class="overview-letterhead">
+            <div class="letterhead-initials">A &middot; L</div>
+            <div class="letterhead-estate">Casa Solenne &middot; Illes Balears</div>
+          </div>
+
+          <div class="section-header" style="margin-bottom: 1.5rem;">
+            <span class="section-eyebrow" data-lang-en="A Personal Welcome" data-lang-es="Una Bienvenida Personal">A Personal Welcome</span>
+            <h2 id="overview-heading" class="section-title" data-lang-en="Celebrating Seven Years Across Two Worlds" data-lang-es="Celebrando Siete A&ntilde;os Entre Dos Mundos">Celebrating Seven Years Across Two Worlds</h2>
+          </div>
+
+          <div class="overview-body">
+            <p data-lang-en="Seven years ago, our paths crossed beneath the porticoes of Bologna during an autumn research colloquium. Between Luca's deep roots in the coastal hills of Liguria and Amara's vibrant Punjabi heritage rooted in Amritsar and London, our lives quickly wove together through shared journeys, rich culinary traditions, and an enduring curiosity for the world." data-lang-es="Hace siete a&ntilde;os, nuestros caminos se cruzaron bajo los p&oacute;rticos de Bolonia durante un coloquio de investigaci&oacute;n en oto&ntilde;o. Entre las ra&iacute;ces de Luca en las colinas costeras de Liguria y la herencia punjabi de Amara arraigada en Amritsar y Londres, nuestras vidas se entrelazaron a trav&eacute;s de viajes compartidos y ricas tradiciones culinarias.">
+              Seven years ago, our paths crossed beneath the porticoes of Bologna during an autumn research colloquium. Between Luca's deep roots in the coastal hills of Liguria and Amara's vibrant Punjabi heritage rooted in Amritsar and London, our lives quickly wove together through shared journeys, rich culinary traditions, and an enduring curiosity for the world.
+            </p>
+            <p data-lang-en="When we envisioned our wedding, we longed not just for a single afternoon, but for an immersive three-day gathering where our families and dearest friends could truly slow down, savor sunlit terraces, and celebrate together in one timeless sanctuary. We chose Casa Solenne on the quiet northern bluffs of Mallorca for its historic olive groves, terracotta stone courtyards, and sweeping Balearic horizons." data-lang-es="Cuando so&ntilde;amos con nuestra boda, deseamos no solo una tarde, sino un encuentro &iacute;ntimo de tres d&iacute;as donde nuestras familias y amigos pudieran relajarse, saborear terrazas soleadas y celebrar juntos. Elegimos Casa Solenne en los acantilados del norte de Mallorca por sus olivares hist&oacute;ricos y sus horizontes sobre el Mediterr&aacute;neo.">
+              When we envisioned our wedding, we longed not just for a single afternoon, but for an immersive three-day gathering where our families and dearest friends could truly slow down, savor sunlit terraces, and celebrate together in one timeless sanctuary. We chose Casa Solenne on the quiet northern bluffs of Mallorca for its historic olive groves, terracotta stone courtyards, and sweeping Balearic horizons.
+            </p>
+            <p data-lang-en="We cannot wait to welcome you to the island this September for three unforgettable days of sunset aperitivos, meaningful vows, joyful dancing, and seaside memories." data-lang-es="Estamos ansiosos por darles la bienvenida a la isla este septiembre para tres d&iacute;as inolvidables de aperitivos al atardecer, votos sinceros y bailes bajo las estrellas.">
+              We cannot wait to welcome you to the island this September for three unforgettable days of sunset aperitivos, meaningful vows, joyful dancing, and seaside memories.
+            </p>
+          </div>
+
+          <div class="overview-signoff">
+            With our warmest love,<br>
+            Amara &amp; Luca
+          </div>
+
+          <div class="lang-toggle-group" role="group" aria-label="Language Preview Toggle">
+            <button type="button" class="lang-toggle-btn active" data-lang-toggle="en" aria-pressed="true">English (Original)</button>
+            <button type="button" class="lang-toggle-btn" data-lang-toggle="es" aria-pressed="false">Espa&ntilde;ol (Preview)</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. 3-Day Weekend Itinerary -->
+    <section id="itinerary" class="section" style="background-color: var(--bg-alt);" aria-labelledby="itinerary-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">The Celebration Flow</span>
+          <h2 id="itinerary-heading" class="section-title">A Three-Day Weekend Itinerary</h2>
+          <p class="section-subtitle">Join us for three thoughtfully curated celebrations across the terraces and olive groves of Casa Solenne.</p>
+        </div>
+
+        <div class="itinerary-grid">
+          <!-- Day 1 -->
+          <article class="itinerary-card" aria-labelledby="day1-title">
+            <span class="itinerary-day-tag">Day One</span>
+            <div class="itinerary-date">Friday, September 17, 2027</div>
+            <h3 id="day1-title" class="itinerary-title">Sunset Tapas &amp; Welcome Aperitivo</h3>
+            <div class="itinerary-time">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>5:30 PM &ndash; 9:00 PM</span>
+            </div>
+            <p class="itinerary-desc">
+              Kick off the wedding weekend with artisanal Balearic tapas, spritzes, crisp local Malvasia wine, and fresh music overlooking the golden hour sunset.
+            </p>
+            <div class="itinerary-meta-list">
+              <div class="itinerary-meta-row">
+                <span class="itinerary-meta-label">Location:</span>
+                <span>The Olive Grove Terrace, Casa Solenne</span>
+              </div>
+              <div class="itinerary-meta-row">
+                <span class="itinerary-meta-label">Attire:</span>
+                <span>Coastal Chic / Festive Linen (smart casual, light fabrics)</span>
+              </div>
+              <div class="itinerary-meta-row">
+                <span class="itinerary-meta-label">Shuttles:</span>
+                <span>Departs partner hotels at 4:45 PM; continuous returns until 9:30 PM</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Day 2 -->
+          <article class="itinerary-card" aria-labelledby="day2-title">
+            <span class="itinerary-day-tag">Day Two &middot; The Main Event</span>
+            <div class="itinerary-date">Saturday, September 18, 2027</div>
+            <h3 id="day2-title" class="itinerary-title">Wedding Ceremony &amp; Gala Celebration</h3>
+            <div class="itinerary-time">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>4:30 PM &ndash; 2:00 AM</span>
+            </div>
+            <p class="itinerary-desc">
+              Exchange of vows on the cliffside lawn overlooking the sea, followed by courtyard cocktail hour, seated multi-course dinner, and dancing under the stars.
+            </p>
+            <div class="itinerary-meta-list">
+              <div class="itinerary-meta-row">
+                <span class="itinerary-meta-label">Location:</span>
+                <span>Cliffside Sea Lawn &amp; Starlit Stone Courtyard</span>
+              </div>
+              <div class="itinerary-meta-row">
+                <span class="itinerary-meta-label">Attire:</span>
+                <span>Formal Destination / Black Tie Optional / Traditional Indian or Western Formalwear</span>
+              </div>
+              <div class="itinerary-meta-row">
+                <span class="itinerary-meta-label">Shuttles:</span>
+                <span>Departs partner hotels at 3:30 PM; hourly returns from 11:00 PM to 2:15 AM</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Day 3 -->
+          <article class="itinerary-card" aria-labelledby="day3-title">
+            <span class="itinerary-day-tag">Day Three</span>
+            <div class="itinerary-date">Sunday, September 19, 2027</div>
+            <h3 id="day3-title" class="itinerary-title">Farewell Paella &amp; Citrus Brunch</h3>
+            <div class="itinerary-time">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>11:00 AM &ndash; 2:30 PM</span>
+            </div>
+            <p class="itinerary-desc">
+              A relaxed goodbye gathering featuring wood-fired seafood paella, fresh citrus pastries, espresso bar, and chilled cava by the fountain garden.
+            </p>
+            <div class="itinerary-meta-list">
+              <div class="itinerary-meta-row">
+                <span class="itinerary-meta-label">Location:</span>
+                <span>Garden Fountain Pergola, Casa Solenne</span>
+              </div>
+              <div class="itinerary-meta-row">
+                <span class="itinerary-meta-label">Attire:</span>
+                <span>Casual Resort / Breezy Summer Dresses &amp; Espadrilles</span>
+              </div>
+              <div class="itinerary-meta-row">
+                <span class="itinerary-meta-label">Shuttles:</span>
+                <span>Departs partner hotels at 10:15 AM; airport transfers from 2:30 PM</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Mallorca Destination Guide -->
+    <section id="guide" class="section" aria-labelledby="guide-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Island Discoveries</span>
+          <h2 id="guide-heading" class="section-title">Our Mallorca Travel Guide</h2>
+          <p class="section-subtitle">Mallorca's northern coast is renowned for UNESCO heritage mountain ridges, dramatic rocky coves, and quiet historic hamlets.</p>
+        </div>
+
+        <div class="spaces-grid">
+          <div class="space-card">
+            <div class="space-card-body">
+              <div class="space-role">Scenic Route</div>
+              <h3 class="space-title">Serra de Tramuntana Road</h3>
+              <p class="space-desc">The winding coastal drive between Valldemossa, Dei&agrave;, and S&oacute;ller features sheer cliff drop-offs into the deep blue Mediterranean, stone viewpoints, and ancient olive terraces.</p>
+            </div>
+          </div>
+          <div class="space-card">
+            <div class="space-card-body">
+              <div class="space-role">Swimming Cove</div>
+              <h3 class="space-title">Cala Dei&agrave; Sea Shingle</h3>
+              <p class="space-desc">A natural pebble beach tucked between rocky crags with crystal-clear emerald water. Perfect for an afternoon dip and fresh grilled sea bream at seaside tavernas.</p>
+            </div>
+          </div>
+          <div class="space-card">
+            <div class="space-card-body">
+              <div class="space-role">Historic Village</div>
+              <h3 class="space-title">Valldemossa Cobblestones</h3>
+              <p class="space-desc">Stroll the car-free mountain stone lanes filled with bougainvillea, visit the historic royal charterhouse, and taste the famous warm coca de patata potato pastries.</p>
+            </div>
+          </div>
+          <div class="space-card">
+            <div class="space-card-body">
+              <div class="space-role">Vintage Railway</div>
+              <h3 class="space-title">S&oacute;ller Citrus Tramway</h3>
+              <p class="space-desc">Ride the heritage 1912 wooden tram connecting the citrus valley of S&oacute;ller down to the harbor of Port de S&oacute;ller through fragrant orange groves.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Travel & Arrival Logistics -->
+    <section id="travel" class="section" style="background-color: var(--bg-alt);" aria-labelledby="travel-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Arrival &amp; Transit</span>
+          <h2 id="travel-heading" class="section-title">Destination Travel Details</h2>
+          <p class="section-subtitle">Everything you need to plan your smooth arrival on Mallorca.</p>
+        </div>
+
+        <div class="transport-card">
+          <div class="transport-grid">
+            <div>
+              <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem;">Airport Arrivals (PMI)</h3>
+              <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                All international flights arrive at <strong>Palma de Mallorca Airport (PMI)</strong>, which offers direct connections from major European hubs (London, Paris, Frankfurt, Milan, Madrid, Barcelona).
+              </p>
+              <ul style="font-size: 0.875rem; color: var(--text-secondary); padding-left: 1.25rem; line-height: 1.6;">
+                <li>35&ndash;45 minutes highway drive from PMI to our partner host hotels.</li>
+                <li>Official airport taxi stands are located outside arrivals (approx. &euro;55&ndash;&euro;75).</li>
+                <li>Pre-booked private airport transfers can also be arranged via your hotel concierge.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem;">Car Rental &amp; Mountain Roads</h3>
+              <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                Renting a car at PMI is excellent for daytime island exploration. However, private wedding shuttles are provided for all official weekend events so you can celebrate freely without driving winding mountain roads at night.
+              </p>
+              <ul style="font-size: 0.875rem; color: var(--text-secondary); padding-left: 1.25rem; line-height: 1.6;">
+                <li>Rental agencies available directly inside the PMI terminal.</li>
+                <li>Compact vehicles recommended for narrow village lanes.</li>
+                <li>Free guest parking available at each partner hotel.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem;">Ferry &amp; Schengen Entry</h3>
+              <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                For guests traveling across mainland Spain, high-speed passenger ferries operate daily between Barcelona or Valencia and the Port of Palma.
+              </p>
+              <ul style="font-size: 0.875rem; color: var(--text-secondary); padding-left: 1.25rem; line-height: 1.6;">
+                <li>Spain is within the European Schengen Zone. Ensure your passport has at least 6 months validity.</li>
+                <li>Check any visa or ETIAS requirements based on your passport issuing country.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Accommodations / Host Hotels -->
+    <section id="hotels" class="section" aria-labelledby="hotels-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Where to Stay</span>
+          <h2 id="hotels-heading" class="section-title">Curated Partner Accommodations</h2>
+          <p class="section-subtitle">We have reserved dedicated guest room blocks at three distinct properties along Mallorca's northern coast. Dedicated wedding shuttles will serve all three locations throughout the weekend.</p>
+        </div>
+
+        <div class="hotels-grid">
+          <!-- Hotel 1 -->
+          <article class="hotel-card" aria-labelledby="hotel1-name">
+            <span class="hotel-type-badge">Boutique Coastal Hotel</span>
+            <h3 id="hotel1-name" class="hotel-name">The Cala House</h3>
+            <div class="hotel-location">Cala Dei&agrave; Coastline &middot; 12 min shuttle to Casa Solenne</div>
+            <p class="hotel-desc">
+              Handcrafted stone retreat perched above a quiet turquoise cove, ideal for couples and small travel groups desiring intimate Mediterranean charm and cliffside views.
+            </p>
+            <div class="hotel-block-info">
+              <div class="hotel-block-code">Room Block Code: SINGH-MORETTI</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Discounted rate valid through July 15, 2027</div>
+            </div>
+            <div class="hotel-actions">
+              <button type="button" class="btn btn-primary btn-sm" data-demo-action="book-hotel" data-hotel-name="The Cala House">Book Room Block (Demo)</button>
+              <button type="button" class="btn btn-outline btn-sm" data-demo-action="hotel-directions" data-hotel-name="The Cala House">View Map (Demo)</button>
+            </div>
+          </article>
+
+          <!-- Hotel 2 -->
+          <article class="hotel-card" aria-labelledby="hotel2-name">
+            <span class="hotel-type-badge">Full-Service Luxury Resort</span>
+            <h3 id="hotel2-name" class="hotel-name">Hotel Maravela</h3>
+            <div class="hotel-location">North Coast Bluffs &middot; 15 min shuttle to Casa Solenne</div>
+            <p class="hotel-desc">
+              Panoramic coastal property offering extensive amenities, saltwater infinity pool, full spa facilities, and spacious family-friendly multi-room suites.
+            </p>
+            <div class="hotel-block-info">
+              <div class="hotel-block-code">Room Block Code: AMARA-LUCA-27</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Discounted rate valid through July 15, 2027</div>
+            </div>
+            <div class="hotel-actions">
+              <button type="button" class="btn btn-primary btn-sm" data-demo-action="book-hotel" data-hotel-name="Hotel Maravela">Book Room Block (Demo)</button>
+              <button type="button" class="btn btn-outline btn-sm" data-demo-action="hotel-directions" data-hotel-name="Hotel Maravela">View Map (Demo)</button>
+            </div>
+          </article>
+
+          <!-- Hotel 3 -->
+          <article class="hotel-card" aria-labelledby="hotel3-name">
+            <span class="hotel-type-badge">Apartment-Style Residences</span>
+            <h3 id="hotel3-name" class="hotel-name">Sona Mar Suites</h3>
+            <div class="hotel-location">Valldemossa Foothills &middot; 20 min shuttle to Casa Solenne</div>
+            <p class="hotel-desc">
+              Spacious one- and two-bedroom residential apartments featuring private terraces, kitchenettes, and peaceful olive orchard mountain vistas.
+            </p>
+            <div class="hotel-block-info">
+              <div class="hotel-block-code">Room Block Code: DSCG-SOLENNE</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Discounted rate valid through July 15, 2027</div>
+            </div>
+            <div class="hotel-actions">
+              <button type="button" class="btn btn-primary btn-sm" data-demo-action="book-hotel" data-hotel-name="Sona Mar Suites">Book Room Block (Demo)</button>
+              <button type="button" class="btn btn-outline btn-sm" data-demo-action="hotel-directions" data-hotel-name="Sona Mar Suites">View Map (Demo)</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Shuttles & Ground Transport -->
+    <section id="transport" class="section" style="background-color: var(--bg-alt);" aria-labelledby="transport-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Complimentary Guest Shuttles</span>
+          <h2 id="transport-heading" class="section-title">Weekend Transportation Schedule</h2>
+          <p class="section-subtitle">To ensure seamless travel and peace of mind on coastal mountain roads, complimentary private shuttles will transport guests between our partner hotels and Casa Solenne for every event.</p>
+        </div>
+
+        <div class="transport-card">
+          <div class="transport-grid">
+            <div class="shuttle-day-box">
+              <h3 class="shuttle-day-title">Friday Welcome Gathering</h3>
+              <p class="shuttle-day-desc">Shuttle departures to Casa Solenne:</p>
+              <div class="shuttle-times-list">
+                <div><strong>4:40 PM:</strong> Sona Mar Suites</div>
+                <div><strong>4:45 PM:</strong> The Cala House</div>
+                <div><strong>4:50 PM:</strong> Hotel Maravela</div>
+                <div style="margin-top: 0.5rem; color: var(--accent-primary);"><strong>Return Shuttles:</strong> Continuous departures from Casa Solenne between 8:30 PM and 9:30 PM.</div>
+              </div>
+            </div>
+
+            <div class="shuttle-day-box">
+              <h3 class="shuttle-day-title">Saturday Wedding Gala</h3>
+              <p class="shuttle-day-desc">Ceremony arrival shuttle departures:</p>
+              <div class="shuttle-times-list">
+                <div><strong>3:20 PM:</strong> Sona Mar Suites</div>
+                <div><strong>3:30 PM:</strong> The Cala House</div>
+                <div><strong>3:35 PM:</strong> Hotel Maravela</div>
+                <div style="margin-top: 0.5rem; color: var(--accent-primary);"><strong>Return Shuttles:</strong> Hourly return departures starting at 11:00 PM, 12:00 AM, 1:00 AM, and 2:15 AM finale.</div>
+              </div>
+            </div>
+
+            <div class="shuttle-day-box">
+              <h3 class="shuttle-day-title">Sunday Farewell Brunch</h3>
+              <p class="shuttle-day-desc">Morning brunch shuttle departures:</p>
+              <div class="shuttle-times-list">
+                <div><strong>10:10 AM:</strong> Sona Mar Suites</div>
+                <div><strong>10:20 AM:</strong> The Cala House</div>
+                <div><strong>10:25 AM:</strong> Hotel Maravela</div>
+                <div style="margin-top: 0.5rem; color: var(--accent-primary);"><strong>Airport Transfers:</strong> Coordinated group departure to Palma Airport (PMI) leaves Casa Solenne at 2:30 PM.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Casa Solenne Event Spaces -->
+    <section id="spaces" class="section" aria-labelledby="spaces-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">The Sanctuary</span>
+          <h2 id="spaces-heading" class="section-title">Casa Solenne Grounds &amp; Spaces</h2>
+          <p class="section-subtitle">Dating back to the 17th century, Casa Solenne balances historic Balearic stone architecture with verdant terraces overlooking the sea.</p>
+        </div>
+
+        <div class="spaces-grid">
+          <div class="space-card">
+            <div class="space-card-body">
+              <div class="space-role">Ceremony Lawn</div>
+              <h3 class="space-title">The Cliffside Sea Lawn</h3>
+              <p class="space-desc">Perched 200 meters above the turquoise sea, framed by ancient maritime pines and an open stone balustrade where our vows will be exchanged.</p>
+            </div>
+          </div>
+          <div class="space-card">
+            <div class="space-card-body">
+              <div class="space-role">Dinner Courtyard</div>
+              <h3 class="space-title">The Olive Mill Courtyard</h3>
+              <p class="space-desc">A cobblestone quadrangle surrounded by honeyed sandstone arches, bougainvillea, and candlelit long dining tables under festoon lights.</p>
+            </div>
+          </div>
+          <div class="space-card">
+            <div class="space-card-body">
+              <div class="space-role">Cocktail Pergola</div>
+              <h3 class="space-title">The Terraced Citrus Pavilion</h3>
+              <p class="space-desc">A shaded garden pergola flanked by lemon trees and ancient amphorae, ideal for sunset spritzes and artisanal Balearic charcuterie.</p>
+            </div>
+          </div>
+          <div class="space-card">
+            <div class="space-card-body">
+              <div class="space-role">After-Hours Lounge</div>
+              <h3 class="space-title">The Cypress Arcade</h3>
+              <p class="space-desc">An intimate vaulted stone cellar and terrace bar featuring Mediterranean mixology, lounge seating, and late-night acoustic sets.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Wedding Party & Honored Families -->
+    <section id="party" class="section" style="background-color: var(--bg-alt);" aria-labelledby="party-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Loved Ones</span>
+          <h2 id="party-heading" class="section-title">Our Wedding Party &amp; Families</h2>
+          <p class="section-subtitle">Standing with us across this milestone weekend.</p>
+        </div>
+
+        <div class="party-grid">
+          <div class="party-card">
+            <div class="party-role">Maid of Honor</div>
+            <h3 class="party-name">Priya Singh</h3>
+            <p class="party-relation">Sister of the Bride &middot; London &amp; New Delhi</p>
+          </div>
+          <div class="party-card">
+            <div class="party-role">Best Man</div>
+            <h3 class="party-name">Matteo Moretti</h3>
+            <p class="party-relation">Brother of the Groom &middot; Genoa &amp; Milan</p>
+          </div>
+          <div class="party-card">
+            <div class="party-role">Parents of the Bride</div>
+            <h3 class="party-name">Ananya &amp; Vikram Singh</h3>
+            <p class="party-relation">Amritsar &amp; London</p>
+          </div>
+          <div class="party-card">
+            <div class="party-role">Parents of the Groom</div>
+            <h3 class="party-name">Chiara &amp; Giancarlo Moretti</h3>
+            <p class="party-relation">Santa Margherita Ligure, Italy</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Multi-Event Weekend RSVP -->
+    <section id="rsvp" class="section" aria-labelledby="rsvp-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Guest Attendance</span>
+          <h2 id="rsvp-heading" class="section-title">Multi-Event Weekend RSVP</h2>
+          <p class="section-subtitle">Please respond by Saturday, August 1, 2027 so we can finalize seating, private shuttles, and weekend catering.</p>
+        </div>
+
+        <div class="rsvp-wrapper">
+          <div class="rsvp-header">
+            <span class="rsvp-deadline-badge">Response Deadline: August 1, 2027</span>
+            <p style="font-size: 0.875rem; color: var(--text-secondary);">Celebrating Amara &amp; Luca &middot; September 17&ndash;19, 2027</p>
+          </div>
+
+          <div id="rsvp-status" class="rsvp-status-alert" role="status" aria-live="polite" hidden></div>
+
+          <form id="rsvp-form" novalidate>
+            <!-- Primary Contact -->
+            <fieldset class="rsvp-fieldset">
+              <legend class="rsvp-legend">1. Guest Contact Information</legend>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="guest-name" class="form-label">Full Name <span class="required" aria-hidden="true">*</span></label>
+                  <input type="text" id="guest-name" name="guest_name" class="form-control" placeholder="e.g. Maya Lin" aria-required="true" aria-describedby="guest-name-error">
+                  <span id="guest-name-error" class="error-message" role="alert" hidden></span>
+                </div>
+                <div class="form-group">
+                  <label for="guest-email" class="form-label">Email Address <span class="required" aria-hidden="true">*</span></label>
+                  <input type="email" id="guest-email" name="guest_email" class="form-control" placeholder="e.g. maya@example.com" aria-required="true" aria-describedby="guest-email-error">
+                  <span id="guest-email-error" class="error-message" role="alert" hidden></span>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Weekend Attendance Decision -->
+            <fieldset class="rsvp-fieldset">
+              <legend class="rsvp-legend">2. Attendance Decision <span class="required" aria-hidden="true">*</span></legend>
+              <div class="radio-group" role="radiogroup" aria-describedby="attendance-error">
+                <label class="radio-card" for="attend-yes">
+                  <input type="radio" id="attend-yes" name="attending" value="yes">
+                  <span class="radio-card-label">Joyfully Attending</span>
+                </label>
+                <label class="radio-card" for="attend-no">
+                  <input type="radio" id="attend-no" name="attending" value="no">
+                  <span class="radio-card-label">Regretfully Declining</span>
+                </label>
+              </div>
+              <span id="attendance-error" class="error-message" role="alert" hidden></span>
+            </fieldset>
+
+            <!-- Attending-Only Conditional Group -->
+            <div id="attending-conditional-fields">
+              <!-- Event Selection -->
+              <fieldset class="rsvp-fieldset">
+                <legend class="rsvp-legend">3. Weekend Events Attending <span class="required" aria-hidden="true">*</span></legend>
+                <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 0.75rem;">Select all events you plan to attend:</p>
+                <div class="checkbox-stack" role="group" aria-describedby="events-error">
+                  <label class="checkbox-card" for="event-friday">
+                    <input type="checkbox" id="event-friday" name="events" value="friday" checked>
+                    <div class="checkbox-card-info">
+                      <span class="checkbox-card-title">Friday Welcome Aperitivo (Sept 17)</span>
+                      <span class="checkbox-card-sub">5:30 PM &ndash; 9:00 PM &middot; Olive Grove Terrace</span>
+                    </div>
+                  </label>
+
+                  <label class="checkbox-card" for="event-saturday">
+                    <input type="checkbox" id="event-saturday" name="events" value="saturday" checked>
+                    <div class="checkbox-card-info">
+                      <span class="checkbox-card-title">Saturday Wedding Ceremony &amp; Gala (Sept 18)</span>
+                      <span class="checkbox-card-sub">4:30 PM &ndash; 2:00 AM &middot; Sea Lawn &amp; Courtyard</span>
+                    </div>
+                  </label>
+
+                  <label class="checkbox-card" for="event-sunday">
+                    <input type="checkbox" id="event-sunday" name="events" value="sunday" checked>
+                    <div class="checkbox-card-info">
+                      <span class="checkbox-card-title">Sunday Farewell Citrus Brunch (Sept 19)</span>
+                      <span class="checkbox-card-sub">11:00 AM &ndash; 2:30 PM &middot; Garden Fountain Pergola</span>
+                    </div>
+                  </label>
+                </div>
+                <span id="events-error" class="error-message" role="alert" hidden></span>
+              </fieldset>
+
+              <!-- Saturday Dinner Entrée Selection -->
+              <div id="saturday-meal-group" class="form-group">
+                <label for="guest-meal" class="form-label">Saturday Gala Dinner Entr&eacute;e <span class="required" aria-hidden="true">*</span></label>
+                <select id="guest-meal" name="guest_meal" class="form-control" aria-describedby="guest-meal-error">
+                  <option value="">Select your entr&eacute;e preference...</option>
+                  <option value="sea-bass">Grilled Mediterranean Sea Bass with Wild Fennel &amp; Lemon Emulsion</option>
+                  <option value="lamb">Slow-Braised Spanish Lamb Shoulder with Saffron Polenta</option>
+                  <option value="risotto">Roasted Artichoke &amp; Truffled Wild Mushroom Risotto (Vegetarian / Vegan)</option>
+                </select>
+                <span id="guest-meal-error" class="error-message" role="alert" hidden></span>
+              </div>
+
+              <!-- Plus-One Toggle -->
+              <fieldset class="rsvp-fieldset">
+                <legend class="rsvp-legend">4. Guest Accompaniment (Plus-One)</legend>
+                <label class="checkbox-card" for="plus-one-check">
+                  <input type="checkbox" id="plus-one-check" name="has_plus_one">
+                  <div class="checkbox-card-info">
+                    <span class="checkbox-card-title">I am bringing an invited guest (Plus-One)</span>
+                    <span class="checkbox-card-sub">Check this box to provide their name and dinner selection</span>
+                  </div>
+                </label>
+
+                <div id="plus-one-details" class="nested-details-box" hidden style="display: none;">
+                  <div class="form-group">
+                    <label for="plus-one-name" class="form-label">Plus-One Full Name <span class="required" aria-hidden="true">*</span></label>
+                    <input type="text" id="plus-one-name" name="plus_one_name" class="form-control" placeholder="e.g. David Lin" aria-describedby="plus-one-name-error">
+                    <span id="plus-one-name-error" class="error-message" role="alert" hidden></span>
+                  </div>
+                  <div id="plus-one-meal-group" class="form-group">
+                    <label for="plus-one-meal" class="form-label">Plus-One Saturday Dinner Entr&eacute;e <span class="required" aria-hidden="true">*</span></label>
+                    <select id="plus-one-meal" name="plus_one_meal" class="form-control" aria-describedby="plus-one-meal-error">
+                      <option value="">Select plus-one entr&eacute;e preference...</option>
+                      <option value="sea-bass">Grilled Mediterranean Sea Bass with Wild Fennel &amp; Lemon Emulsion</option>
+                      <option value="lamb">Slow-Braised Spanish Lamb Shoulder with Saffron Polenta</option>
+                      <option value="risotto">Roasted Artichoke &amp; Truffled Wild Mushroom Risotto (Vegetarian / Vegan)</option>
+                    </select>
+                    <span id="plus-one-meal-error" class="error-message" role="alert" hidden></span>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Shuttle Transportation Request -->
+              <fieldset class="rsvp-fieldset">
+                <legend class="rsvp-legend">5. Complimentary Shuttle Transportation</legend>
+                <label class="checkbox-card" for="shuttle-check">
+                  <input type="checkbox" id="shuttle-check" name="needs_shuttle">
+                  <div class="checkbox-card-info">
+                    <span class="checkbox-card-title">We will use the complimentary guest shuttles</span>
+                    <span class="checkbox-card-sub">Select your pickup hotel so seats are reserved</span>
+                  </div>
+                </label>
+
+                <div id="shuttle-details" class="nested-details-box" hidden style="display: none;">
+                  <div class="form-group">
+                    <label for="shuttle-hotel" class="form-label">Pickup Hotel Location <span class="required" aria-hidden="true">*</span></label>
+                    <select id="shuttle-hotel" name="shuttle_hotel" class="form-control" aria-describedby="shuttle-error">
+                      <option value="">Select your pickup hotel...</option>
+                      <option value="the-cala-house">The Cala House (Cala Dei&agrave; Coastline)</option>
+                      <option value="hotel-maravela">Hotel Maravela (North Coast Bluffs)</option>
+                      <option value="sona-mar-suites">Sona Mar Suites (Valldemossa Foothills)</option>
+                    </select>
+                    <span id="shuttle-error" class="error-message" role="alert" hidden></span>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Dietary & Personal Notes -->
+              <fieldset class="rsvp-fieldset">
+                <legend class="rsvp-legend">6. Notes &amp; Preferences</legend>
+                <div class="form-group">
+                  <label for="guest-dietary" class="form-label">Dietary Restrictions or Allergies</label>
+                  <textarea id="guest-dietary" name="guest_dietary" class="form-control" rows="2" placeholder="e.g. Gluten-free, shellfish allergy, nut allergy..."></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="guest-song" class="form-label">Saturday Evening Dance Floor Song Request</label>
+                  <input type="text" id="guest-song" name="guest_song" class="form-control" placeholder="Artist &ndash; Title">
+                </div>
+                <div class="form-group">
+                  <label for="guest-note" class="form-label">Warm Note to Amara &amp; Luca</label>
+                  <textarea id="guest-note" name="guest_note" class="form-control" rows="3" placeholder="Share a warm wish or travel excitement..."></textarea>
+                </div>
+              </fieldset>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="rsvp-submit-group">
+              <button type="submit" class="btn btn-primary" style="min-width: 280px;">Submit Weekend RSVP</button>
+              <p class="rsvp-notice-footnote">
+                Sales demonstration only. No data is stored or transmitted. On a commissioned client website, responses synchronize with your guest database.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. Gift Registry & Excursion Funds -->
+    <section id="registry" class="section" style="background-color: var(--bg-alt);" aria-labelledby="registry-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Registry &amp; Funds</span>
+          <h2 id="registry-heading" class="section-title">Honeymoon &amp; Conservation Funds</h2>
+          <p class="section-subtitle">Your presence in Mallorca is the greatest gift we could ever receive. For loved ones who wish to celebrate with a gift, we have established three curated contribution funds.</p>
+        </div>
+
+        <div class="registry-grid">
+          <div class="registry-card">
+            <div class="registry-icon">&#9973;</div>
+            <h3 class="registry-title">Mallorca Sailing &amp; Coastal Charter</h3>
+            <p class="registry-desc">Support our post-wedding day sailing exploration of hidden Balearic coves, sea caves, and secluded Mediterranean anchorages.</p>
+            <button type="button" class="btn btn-primary btn-sm" data-demo-action="registry-contribute" data-fund-name="Mallorca Sailing Charter Fund">Contribute to Fund (Demo)</button>
+          </div>
+
+          <div class="registry-card">
+            <div class="registry-icon">&#127807;</div>
+            <h3 class="registry-title">Tramuntana Mountain Conservation</h3>
+            <p class="registry-desc">A charitable donation toward the preservation of ancient stone terraces, historic olive orchards, and dry-stone masonry across Mallorca.</p>
+            <button type="button" class="btn btn-primary btn-sm" data-demo-action="registry-contribute" data-fund-name="Tramuntana Conservation Fund">Contribute to Fund (Demo)</button>
+          </div>
+
+          <div class="registry-card">
+            <div class="registry-icon">&#127969;</div>
+            <h3 class="registry-title">Home &amp; Culinary Journey Fund</h3>
+            <p class="registry-desc">Helping us craft our shared family home, traditional copper cookware, and culinary travel across the Mediterranean basin.</p>
+            <button type="button" class="btn btn-primary btn-sm" data-demo-action="registry-contribute" data-fund-name="Home &amp; Culinary Journey Fund">Contribute to Fund (Demo)</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. Curated Dining & Beaches Recommendations -->
+    <section id="recommendations" class="section" aria-labelledby="recs-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Local Favorites</span>
+          <h2 id="recs-heading" class="section-title">Our Favorite Coastal Spots</h2>
+          <p class="section-subtitle">A few of our cherished culinary and swimming spots if you extend your time on the island.</p>
+        </div>
+
+        <div class="spaces-grid">
+          <div class="space-card">
+            <div class="space-card-body">
+              <div class="space-role">Seaside Dining</div>
+              <h3 class="space-title">Ca's Patr&oacute; March</h3>
+              <p class="space-desc">Iconic open-air rustic seafood restaurant perched right on the rocky crags of Cala Dei&agrave;. Grilled sea bass and cold albari&ntilde;o with waves lapping below.</p>
+            </div>
+          </div>
+          <div class="space-card">
+            <div class="space-card-body">
+              <div class="space-role">Village Bistro</div>
+              <h3 class="space-title">Es Taller Valldemossa</h3>
+              <p class="space-desc">A former historic mechanic's workshop converted into a luminous tapas kitchen with seasonal Tramuntana produce and natural Balearic wines.</p>
+            </div>
+          </div>
+          <div class="space-card">
+            <div class="space-card-body">
+              <div class="space-role">Sunset Viewpoint</div>
+              <h3 class="space-title">Sa Foradada Clifftop</h3>
+              <p class="space-desc">A dramatic natural stone promontory with a hollowed sea arch. Head here an hour before dusk for cold drinks and the most famous sunset in the Balearics.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15. FAQ Accordions -->
+    <section id="faq" class="section" style="background-color: var(--bg-alt);" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Clear Answers</span>
+          <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Common questions regarding travel, attire, shuttles, and weekend details.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq1-ans">
+              <span>What is the dress code for each weekend event?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq1-ans" class="faq-answer" hidden>
+              <p><strong>Friday Sunset Aperitivo:</strong> Coastal Chic / Festive Linen. Relaxed linen suits, breathable summer blazers, cocktail sundresses, or elegant separates (no ties required).</p>
+              <p><strong>Saturday Wedding Gala:</strong> Formal Destination / Black Tie Optional. Tuxedos, dark suits, elegant evening gowns, or traditional Indian formalwear (lehengas, sherwanis, sarees) are warmly celebrated.</p>
+              <p><strong>Sunday Farewell Brunch:</strong> Casual Resort. Breezy summer attire, sun hats, espadrilles, and sunglasses.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq2-ans">
+              <span>Are children invited to the wedding weekend?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq2-ans" class="faq-answer" hidden>
+              <p>While we cherish all the little ones in our lives, our weekend celebrations at Casa Solenne are adults-only due to cliffside terrace geography and evening programming. We can connect traveling parents with certified local hotel babysitting services through our partner concierges.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq3-ans">
+              <span>What is the weather like in Mallorca in late September?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq3-ans" class="faq-answer" hidden>
+              <p>Late September in Mallorca is one of the most idyllic times of the year. Daytime temperatures typically range from 24&deg;C to 28&deg;C (75&deg;F to 82&deg;F) with brilliant sunshine. Evenings along the northern bluffs can bring a light sea breeze dropping to 18&deg;C (64&deg;F), so a light shawl or evening jacket is recommended.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq4-ans">
+              <span>How do wedding shuttles operate between hotels and Casa Solenne?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq4-ans" class="faq-answer" hidden>
+              <p>Complimentary private guest shuttles operate between all three designated partner hotels (The Cala House, Hotel Maravela, and Sona Mar Suites) and Casa Solenne for every event. Departure schedules are displayed in the transportation section above and will also be provided upon check-in at your hotel.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq5-ans">
+              <span>What should we know about currency and payment in Mallorca?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq5-ans" class="faq-answer" hidden>
+              <p>Spain uses the Euro (&euro;). Credit and debit cards (Visa, Mastercard, Amex) and contactless payments (Apple Pay, Google Pay) are accepted almost everywhere across the island. Having a small amount of cash is handy for small beach kiosks or village market stalls.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq6-ans">
+              <span>What is the gift policy for a destination celebration?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq6-ans" class="faq-answer" hidden>
+              <p>Your travel, time, and presence in Mallorca are the greatest gifts we could ever ask for. We kindly request no physical boxed gifts at the wedding venue. For those who wish to contribute toward our future adventures, our digital honeymoon and conservation funds are linked above.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 16. Photo Gallery -->
+    <section id="gallery" class="section" aria-labelledby="gallery-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Visual Moments</span>
+          <h2 id="gallery-heading" class="section-title">The Setting &amp; Memories</h2>
+          <p class="section-subtitle">Moments from Casa Solenne, Amara &amp; Luca, and the Mallorca coastline.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="./assets/images/gallery-1.jpg" alt="Amara Singh and Luca Moretti in an intimate portrait crop smiling warmly together" width="640" height="640">
+            <div class="gallery-caption">Amara &amp; Luca &middot; Mallorca</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/images/gallery-2.jpg" alt="Mallorca coastal cove with clear turquoise waters and rugged limestone cliffs" width="1264" height="848">
+            <div class="gallery-caption">The Mediterranean Coastline</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/images/gallery-3.jpg" alt="Casa Solenne courtyard garden pavilion with central fountain, terracotta tiles, and blooming bougainvillea" width="1264" height="848">
+            <div class="gallery-caption">Casa Solenne Courtyard &amp; Pavilion</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/images/gallery-4.jpg" alt="Twilight welcome dinner tablescape under ancient olive trees set with glowing candles, lemons, figs, and olive branches" width="1264" height="848">
+            <div class="gallery-caption">Friday Welcome Gathering Tablescape</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/images/gallery-5.jpg" alt="Empty circular floral ceremony arch on a cliffside lawn overlooking the deep blue sea" width="1264" height="848">
+            <div class="gallery-caption">The Sea Lawn Ceremony Arch</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/images/gallery-6.jpg" alt="Amara and Luca first dance under warm golden festoon lights on the stone terrace at night" width="1264" height="848">
+            <div class="gallery-caption">First Dance Under the Starlight</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/images/gallery-7.jpg" alt="Farewell brunch spread on a sunny stone terrace overlooking the sea featuring paella, pastries, and fresh juices" width="1264" height="848">
+            <div class="gallery-caption">Sunday Farewell Paella Brunch</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/images/gallery-8.jpg" alt="Sunset over the Serra de Tramuntana coastal cliffs with golden evening clouds" width="1264" height="848">
+            <div class="gallery-caption">Serra de Tramuntana Golden Hour</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/images/gallery-9.jpg" alt="Calligraphy wedding stationery flatlay on deckled cotton paper with wax seal and olive branch accents" width="1264" height="848">
+            <div class="gallery-caption">Amara &amp; Luca Custom Stationery</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 17. Optional Enhancement Previews -->
+    <section id="enhancements" class="section" style="background-color: var(--bg-alt);" aria-labelledby="enhancements-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">&#9733;&#9733;&#9733; Destination Package Enhancements</span>
+          <h2 id="enhancements-heading" class="section-title">Interactive Feature Previews</h2>
+          <p class="section-subtitle">DSCG's top-tier destination package includes advanced bespoke capabilities to elevate your guests' experience across distances.</p>
+        </div>
+
+        <div class="enhancements-grid">
+          <!-- Feature 1: Digital Guestbook Demo -->
+          <div class="enhancement-card">
+            <div class="demo-badge-pill" style="margin-bottom: 0.75rem;">Interactive Live Demo</div>
+            <h3 style="font-size: 1.375rem; font-weight: 600; margin-bottom: 0.5rem;">Digital Guestbook &amp; Well Wishes</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem;">
+              Allow guests both attending and celebrating from afar to leave warm personal notes. Try submitting a note below to preview the front-end interaction:
+            </p>
+
+            <form id="guestbook-form" style="margin-bottom: 1.5rem;">
+              <div class="form-group">
+                <label for="guestbook-author" class="form-label">Your Name</label>
+                <input type="text" id="guestbook-author" class="form-control" placeholder="e.g. Elena Rostova" required>
+              </div>
+              <div class="form-group">
+                <label for="guestbook-message" class="form-label">Message to Amara &amp; Luca</label>
+                <textarea id="guestbook-message" class="form-control" rows="2" placeholder="Wishing you endless joy under the Mediterranean sun!" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-sm">Post Note to Preview</button>
+            </form>
+
+            <div id="guestbook-status" class="rsvp-status-alert" style="background-color: #F0FDF4; border-color: #16A34A; color: #166534;" hidden></div>
+
+            <div id="guestbook-entries">
+              <div class="guestbook-card">
+                <p class="guestbook-card-message">"Counting down the days to celebrate on the terraces of Casa Solenne. Congratulations Amara &amp; Luca!"</p>
+                <div class="guestbook-card-meta">
+                  <span class="guestbook-card-author">Kavita &amp; Rahul</span>
+                  <span class="guestbook-card-date">Sample Message</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 2 & 3: Livestream & QR Photo Cards -->
+          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div class="enhancement-card">
+              <div class="demo-badge-pill" style="margin-bottom: 0.75rem;">Optional Integration</div>
+              <h3 style="font-size: 1.375rem; font-weight: 600; margin-bottom: 0.5rem;">Private Ceremony Livestream</h3>
+              <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem;">
+                For destination celebrations with extended family abroad, DSCG configures seamless, password-protected live broadcast streaming with countdown timers and digital programs.
+              </p>
+              <button type="button" class="btn btn-outline btn-sm" data-demo-action="livestream-preview">Preview Livestream Setup (Demo)</button>
+            </div>
+
+            <div class="enhancement-card">
+              <div class="demo-badge-pill" style="margin-bottom: 0.75rem;">Optional Integration</div>
+              <h3 style="font-size: 1.375rem; font-weight: 600; margin-bottom: 0.5rem;">On-Site QR Guest Photo Upload</h3>
+              <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem;">
+                Place custom QR codes on cocktail tables and dinner menus so guests can instantly upload high-resolution candids directly to a private, shared couple's cloud album.
+              </p>
+              <button type="button" class="btn btn-outline btn-sm" data-demo-action="qr-photo-upload">Preview QR Upload Flow (Demo)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 18. Guest Concierge & Coordinator Contact -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="overview-card" style="text-align: center;">
+          <span class="section-eyebrow">Guest Services &amp; Assistance</span>
+          <h2 id="contact-heading" class="section-title">Destination Wedding Concierge</h2>
+          <p class="section-subtitle" style="max-width: 600px; margin: 0 auto 1.75rem;">
+            Have specialized travel inquiries, accessibility requirements, or childcare questions during your stay on Mallorca? Our dedicated destination team is here to assist.
+          </p>
+          <button type="button" class="btn btn-primary" data-demo-action="contact-coordinator">Contact Wedding Coordinator (Demo)</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Accessible Demo Modal Dialog -->
+  <dialog id="demo-modal" aria-labelledby="modal-title" aria-describedby="modal-desc">
+    <div class="demo-dialog-content">
+      <div class="demo-dialog-header">
+        <div>
+          <span class="demo-dialog-badge">DSCG Demonstration Notice</span>
+          <h3 id="modal-title" class="demo-dialog-title">Demonstration Feature</h3>
+        </div>
+        <button type="button" class="demo-dialog-close" aria-label="Close dialog">&times;</button>
+      </div>
+      <p id="modal-desc" class="demo-dialog-text">
+        This is an interactive demonstration control for DSCG's Wedding Websites sales portal.
+      </p>
+      <div class="demo-dialog-footer">
+        <button type="button" class="btn btn-primary btn-sm demo-dialog-dismiss">Acknowledge &amp; Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- 19. Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <h3>Amara &amp; Luca &middot; Mallorca 2027</h3>
+          <p>DSCG &#9733;&#9733;&#9733; Wedding Weekend / Destination Demo ($1,195)</p>
+          <p style="margin-top: 0.25rem;">Casa Solenne &middot; North Coast &middot; Mallorca, Spain</p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <h4 style="color: #F8FAFC; font-size: 0.875rem; margin-bottom: 0.5rem;">Visual Directions</h4>
+            <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.8125rem;">
+              <a href="?style=mediterranean-minimal">1. Mediterranean Minimal</a>
+              <a href="?style=resort-cinematic">2. Resort Cinematic</a>
+              <a href="?style=sun-washed-organic">3. Sun-Washed Organic</a>
+              <a href="?style=european-editorial">4. European Editorial</a>
+              <a href="?style=night-before-after">5. Night-Before-After</a>
+            </div>
+          </div>
+          <div>
+            <h4 style="color: #F8FAFC; font-size: 0.875rem; margin-bottom: 0.5rem;">DSCG Ecosystem</h4>
+            <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.8125rem;">
+              <a href="https://dscg-wedding-portal.netlify.app" target="_blank" rel="noopener">DSCG Wedding Portal</a>
+              <a href="https://wedding-essential-demo.netlify.app" target="_blank" rel="noopener">&#9733; Wedding Essential Demo</a>
+              <a href="https://wedding-website-demo-960.netlify.app" target="_blank" rel="noopener">&#9733;&#9733; Wedding Website Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2027 Dark Star Consulting Group (DSCG). All rights reserved. Customer-facing sales demonstration.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
