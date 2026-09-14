@@ -22,11 +22,11 @@ export const CONFIG = {
     FRIDAY: 'Friday, September 17, 2027',
     SATURDAY: 'Saturday, September 18, 2027',
     SUNDAY: 'Sunday, September 19, 2027',
-    RSVP_DEADLINE: 'Saturday, August 1, 2027'
+    RSVP_DEADLINE: 'Sunday, August 1, 2027'
   },
   PRICING: {
     TIER: '★★★ Wedding Weekend / Destination',
-    STARTING_PRICE: '$1,195'
+    STARTING_PRICE: 'Starting at $1,195'
   },
   HOTELS: [
     {

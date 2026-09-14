@@ -1,13 +1,13 @@
 # DSCG Wedding Websites · Site 4: Wedding Weekend / Destination Demo
 
-A production-grade, customer-facing sales demonstration for Dark Star Consulting Group's (DSCG) premier **★★★ Wedding Weekend / Destination** package (**$1,195**).
+A production-grade, customer-facing sales demonstration for Dark Star Consulting Group's (DSCG) premier **★★★ Wedding Weekend / Destination** package (**Starting at $1,195**).
 
 ## Overview
 
 - **Couple:** Amara Singh & Luca Moretti
 - **Destination & Venue:** Casa Solenne (North Coast · Mallorca, Spain)
 - **Weekend Dates:** Friday, September 17, 2027 – Sunday, September 19, 2027
-- **RSVP Deadline:** Saturday, August 1, 2027
+- **RSVP Deadline:** Sunday, August 1, 2027
 - **Nearest Airport:** Palma de Mallorca Airport (PMI)
 - **Host Partner Hotels:**
   - The Cala House (Boutique Coastal Hotel · Room Block: `SINGH-MORETTI`)
@@ -32,20 +32,31 @@ The visual direction can be toggled via the demonstration bar, dropdown select, 
 - **3-Day Multi-Event Itinerary:** Friday Sunset Tapas & Welcome Aperitivo, Saturday Wedding Ceremony & Gala Celebration, Sunday Farewell Paella & Citrus Brunch.
 - **Multi-Event Weekend RSVP Form:**
   - Client-side accessible inline validation (`role="alert"`, `aria-invalid`, `aria-describedby`, form status region).
-  - Conditional display based on attendance.
+  - Conditional display based on attendance decision.
   - Saturday dinner entrée selection (Sea Bass, Lamb Shoulder, Truffled Mushroom Risotto).
   - Plus-one toggle with accompanying name and dinner entrée validation.
   - Shuttle pickup location selection across the 3 partner hotels.
   - Strict sales demonstration modal confirmation disclaimer (zero backend persistence).
+  - Pristine initial and reset state management.
 - **Travel & Transportation Logistics:** Comprehensive flight guidelines into PMI, airport transfers, rental car advice, and scheduled shuttle timetables.
 - **Island Guide & Curated Dining:** Serra de Tramuntana scenic drives, Cala Deià swimming, Valldemossa bakeries, and Sóller vintage tram.
 - **Honeymoon & Conservation Funds:** Interactive demonstration contribution flows.
-- **★★★ Enhancement Previews:**
-  - Front-end interactive Digital Guestbook demo.
+- **Optional Enhancement Previews (Not included in baseline starting price):**
+  - Commissioned Wedding Weekend / Destination sites can be expanded with optional guest-experience enhancements such as the examples below. Availability and pricing are determined after project review.
+  - Front-end interactive Digital Guestbook demo (Optional Enhancement Preview).
   - Private Ceremony Livestream preview modal.
   - On-site QR Guest Photo Collection preview modal.
   - Real-time Multilingual Preview toggle (English / Spanish).
 - **Zero Real External Dependencies:** No external booking engines, live payment gateways, or unowned email channels.
+
+## Verification & Acceptance
+
+15/15 visual permutations and the defined automated acceptance checks passed:
+- 5 visual directions across 3 viewports (390px mobile, 768px tablet, 1440px desktop) with zero layout overflow.
+- 10/10 curated image assets successfully loaded.
+- Complete RSVP multi-event validation state matrix and reset behavior verified.
+- Mobile navigation drawer focus trap, `inert` attribute management, and Escape dismissal verified.
+- Smooth-scrolling reduced-motion preference handling (`behavior: auto`) verified.
 
 ## Development & Build
 

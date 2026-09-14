@@ -64,29 +64,137 @@ export function initRsvp() {
     }
   }
 
-  // Attendance Radio Change: Show/Hide Attending-Specific Fields
-  attendRadios.forEach(radio => {
-    radio.addEventListener('change', () => {
-      const isAttending = radio.value === 'yes';
+  function updateAttendanceView() {
+    const attendingSelected = form.querySelector('input[name="attending"]:checked');
+    const isAttending = attendingSelected && attendingSelected.value === 'yes';
+
+    if (attendanceError) {
+      attendanceError.textContent = '';
+      attendanceError.setAttribute('hidden', '');
+    }
+
+    if (isAttending) {
       if (attendingDetailsGroup) {
-        if (isAttending) {
-          attendingDetailsGroup.removeAttribute('hidden');
-          attendingDetailsGroup.style.display = 'block';
+        attendingDetailsGroup.removeAttribute('hidden');
+        attendingDetailsGroup.style.display = 'block';
+      }
+      // Show Saturday meal only if Saturday event is checked
+      if (saturdayMealGroup && saturdayEventCheck) {
+        if (saturdayEventCheck.checked) {
+          saturdayMealGroup.removeAttribute('hidden');
+          saturdayMealGroup.style.display = 'block';
         } else {
-          attendingDetailsGroup.setAttribute('hidden', '');
-          attendingDetailsGroup.style.display = 'none';
+          saturdayMealGroup.setAttribute('hidden', '');
+          saturdayMealGroup.style.display = 'none';
         }
       }
-      if (attendanceError) {
-        attendanceError.textContent = '';
-        attendanceError.setAttribute('hidden', '');
+      // Plus-one meal group if plus-one checked
+      if (plusOneMealGroup && plusOneCheckbox && saturdayEventCheck) {
+        if (plusOneCheckbox.checked && saturdayEventCheck.checked) {
+          plusOneMealGroup.removeAttribute('hidden');
+          plusOneMealGroup.style.display = 'block';
+        } else {
+          plusOneMealGroup.setAttribute('hidden', '');
+          plusOneMealGroup.style.display = 'none';
+        }
       }
-    });
+    } else {
+      // If declining or neither selected
+      if (attendingDetailsGroup) {
+        attendingDetailsGroup.setAttribute('hidden', '');
+        attendingDetailsGroup.style.display = 'none';
+      }
+      if (saturdayMealGroup) {
+        saturdayMealGroup.setAttribute('hidden', '');
+        saturdayMealGroup.style.display = 'none';
+      }
+      // Clear all attending-only errors
+      if (eventsError) {
+        eventsError.textContent = '';
+        eventsError.setAttribute('hidden', '');
+      }
+      clearError(mealSelect, mealError);
+      clearError(plusOneNameInput, plusOneNameError);
+      clearError(plusOneMealSelect, plusOneMealError);
+      clearError(transportSelect, transportError);
+    }
+  }
+
+  let isResetting = false;
+  function resetFormState() {
+    if (isResetting) return;
+    isResetting = true;
+
+    form.reset();
+    if (statusEl) {
+      statusEl.textContent = '';
+      statusEl.setAttribute('hidden', '');
+    }
+    clearError(nameInput, nameError);
+    clearError(emailInput, emailError);
+    if (attendanceError) {
+      attendanceError.textContent = '';
+      attendanceError.setAttribute('hidden', '');
+    }
+    if (eventsError) {
+      eventsError.textContent = '';
+      eventsError.setAttribute('hidden', '');
+    }
+    clearError(mealSelect, mealError);
+    clearError(plusOneNameInput, plusOneNameError);
+    clearError(plusOneMealSelect, plusOneMealError);
+    clearError(transportSelect, transportError);
+
+    // Initial state: attending-conditional-fields hidden
+    if (attendingDetailsGroup) {
+      attendingDetailsGroup.setAttribute('hidden', '');
+      attendingDetailsGroup.style.display = 'none';
+    }
+    // Saturday meal group hidden
+    if (saturdayMealGroup) {
+      saturdayMealGroup.setAttribute('hidden', '');
+      saturdayMealGroup.style.display = 'none';
+    }
+    // Plus-one hidden & unchecked
+    if (plusOneCheckbox) plusOneCheckbox.checked = false;
+    if (plusOneDetails) {
+      plusOneDetails.setAttribute('hidden', '');
+      plusOneDetails.style.display = 'none';
+    }
+    if (plusOneMealGroup) {
+      plusOneMealGroup.setAttribute('hidden', '');
+      plusOneMealGroup.style.display = 'none';
+    }
+    // Shuttle hidden & unchecked
+    if (transportCheckbox) transportCheckbox.checked = false;
+    if (transportDetails) {
+      transportDetails.setAttribute('hidden', '');
+      transportDetails.style.display = 'none';
+    }
+
+    isResetting = false;
+  }
+
+  // Set pristine initial state on mount
+  resetFormState();
+  form.addEventListener('reset', () => {
+    if (!isResetting) {
+      setTimeout(resetFormState, 0);
+    }
+  });
+
+  // Attendance Radio Change: Show/Hide Attending-Specific Fields
+  attendRadios.forEach(radio => {
+    radio.addEventListener('change', updateAttendanceView);
   });
 
   // Saturday Event Checkbox Change: Show/Hide Meal Selection
   if (saturdayEventCheck && saturdayMealGroup) {
     saturdayEventCheck.addEventListener('change', () => {
+      const attendingSelected = form.querySelector('input[name="attending"]:checked');
+      const isAttending = attendingSelected && attendingSelected.value === 'yes';
+      if (!isAttending) return;
+
       if (saturdayEventCheck.checked) {
         saturdayMealGroup.removeAttribute('hidden');
         saturdayMealGroup.style.display = 'block';
@@ -295,45 +403,7 @@ export function initRsvp() {
         : `Thank you, ${guestName}. Response interaction demonstrated successfully. No information was submitted or stored because this is a fictional DSCG sales demonstration. On a live client website, guest responses can be configured for the approved guest-management workflow.`
     });
 
-    // Form Reset
-    form.reset();
-    if (statusEl) {
-      statusEl.textContent = '';
-      statusEl.setAttribute('hidden', '');
-    }
-    clearError(nameInput, nameError);
-    clearError(emailInput, emailError);
-    if (attendanceError) {
-      attendanceError.textContent = '';
-      attendanceError.setAttribute('hidden', '');
-    }
-    if (eventsError) {
-      eventsError.textContent = '';
-      eventsError.setAttribute('hidden', '');
-    }
-    clearError(mealSelect, mealError);
-    clearError(plusOneNameInput, plusOneNameError);
-    clearError(plusOneMealSelect, plusOneMealError);
-    clearError(transportSelect, transportError);
-
-    // Reset conditional display
-    if (plusOneCheckbox) plusOneCheckbox.checked = false;
-    if (plusOneDetails) {
-      plusOneDetails.setAttribute('hidden', '');
-      plusOneDetails.style.display = 'none';
-    }
-    if (transportCheckbox) transportCheckbox.checked = false;
-    if (transportDetails) {
-      transportDetails.setAttribute('hidden', '');
-      transportDetails.style.display = 'none';
-    }
-    if (saturdayMealGroup) {
-      saturdayMealGroup.removeAttribute('hidden');
-      saturdayMealGroup.style.display = 'block';
-    }
-    if (attendingDetailsGroup) {
-      attendingDetailsGroup.removeAttribute('hidden');
-      attendingDetailsGroup.style.display = 'block';
-    }
+    // Form Reset - Restore clean initial state
+    resetFormState();
   });
 }

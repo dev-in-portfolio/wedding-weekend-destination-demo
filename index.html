@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amara &amp; Luca &middot; Wedding Weekend Destination Demo &middot; DSCG</title>
-  <meta name="description" content="Customer-facing sales demo of Dark Star Consulting Group's &#9733;&#9733;&#9733; Wedding Weekend / Destination package ($1,195), featuring Amara Singh &amp; Luca Moretti in Mallorca, Spain.">
+  <meta name="description" content="Customer-facing sales demo of Dark Star Consulting Group's &#9733;&#9733;&#9733; Wedding Weekend / Destination package (Starting at $1,195), featuring Amara Singh &amp; Luca Moretti in Mallorca, Spain.">
 
   <!-- Google Fonts: Editorial Serifs & Modern Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +31,7 @@
       <div class="demo-bar-badge-group">
         <span class="demo-badge-pill">DSCG Demo</span>
         <span class="demo-tier-label">
-          <span class="demo-tier-stars">&#9733;&#9733;&#9733;</span> Wedding Weekend / Destination &middot; $1,195
+          <span class="demo-tier-stars">&#9733;&#9733;&#9733;</span> Wedding Weekend / Destination &middot; Starting at $1,195
         </span>
       </div>
 
@@ -87,7 +87,7 @@
   </header>
 
   <!-- Mobile Drawer -->
-  <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+  <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation" inert aria-hidden="true">
     <div>
       <div class="drawer-header">
         <span class="brand-names">Amara &amp; Luca</span>
@@ -579,12 +579,12 @@
         <div class="section-header">
           <span class="section-eyebrow">Guest Attendance</span>
           <h2 id="rsvp-heading" class="section-title">Multi-Event Weekend RSVP</h2>
-          <p class="section-subtitle">Please respond by Saturday, August 1, 2027 so we can finalize seating, private shuttles, and weekend catering.</p>
+          <p class="section-subtitle">Please respond by Sunday, August 1, 2027 so we can finalize seating, private shuttles, and weekend catering.</p>
         </div>
 
         <div class="rsvp-wrapper">
           <div class="rsvp-header">
-            <span class="rsvp-deadline-badge">Response Deadline: August 1, 2027</span>
+            <span class="rsvp-deadline-badge">Response Deadline: Sunday, August 1, 2027</span>
             <p style="font-size: 0.875rem; color: var(--text-secondary);">Celebrating Amara &amp; Luca &middot; September 17&ndash;19, 2027</p>
           </div>
 
@@ -625,7 +625,7 @@
             </fieldset>
 
             <!-- Attending-Only Conditional Group -->
-            <div id="attending-conditional-fields">
+            <div id="attending-conditional-fields" hidden style="display: none;">
               <!-- Event Selection -->
               <fieldset class="rsvp-fieldset">
                 <legend class="rsvp-legend">3. Weekend Events Attending <span class="required" aria-hidden="true">*</span></legend>
@@ -659,7 +659,7 @@
               </fieldset>
 
               <!-- Saturday Dinner Entrée Selection -->
-              <div id="saturday-meal-group" class="form-group">
+              <div id="saturday-meal-group" class="form-group" hidden style="display: none;">
                 <label for="guest-meal" class="form-label">Saturday Gala Dinner Entr&eacute;e <span class="required" aria-hidden="true">*</span></label>
                 <select id="guest-meal" name="guest_meal" class="form-control" aria-describedby="guest-meal-error">
                   <option value="">Select your entr&eacute;e preference...</option>
@@ -955,13 +955,13 @@
         <div class="section-header">
           <span class="section-eyebrow">&#9733;&#9733;&#9733; Destination Package Enhancements</span>
           <h2 id="enhancements-heading" class="section-title">Interactive Feature Previews</h2>
-          <p class="section-subtitle">DSCG's top-tier destination package includes advanced bespoke capabilities to elevate your guests' experience across distances.</p>
+          <p class="section-subtitle">Commissioned Wedding Weekend / Destination sites can be expanded with optional guest-experience enhancements such as the examples below. Availability and pricing are determined after project review.</p>
         </div>
 
         <div class="enhancements-grid">
           <!-- Feature 1: Digital Guestbook Demo -->
           <div class="enhancement-card">
-            <div class="demo-badge-pill" style="margin-bottom: 0.75rem;">Interactive Live Demo</div>
+            <div class="demo-badge-pill" style="margin-bottom: 0.75rem;">Optional Enhancement Preview</div>
             <h3 style="font-size: 1.375rem; font-weight: 600; margin-bottom: 0.5rem;">Digital Guestbook &amp; Well Wishes</h3>
             <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem;">
               Allow guests both attending and celebrating from afar to leave warm personal notes. Try submitting a note below to preview the front-end interaction:
@@ -1056,7 +1056,7 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <h3>Amara &amp; Luca &middot; Mallorca 2027</h3>
-          <p>DSCG &#9733;&#9733;&#9733; Wedding Weekend / Destination Demo ($1,195)</p>
+          <p>DSCG &#9733;&#9733;&#9733; Wedding Weekend / Destination Demo (Starting at $1,195)</p>
           <p style="margin-top: 0.25rem;">Casa Solenne &middot; North Coast &middot; Mallorca, Spain</p>
         </div>
 

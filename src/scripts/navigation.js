@@ -10,24 +10,39 @@ export function initNavigation() {
   const drawerOverlay = document.querySelector('.drawer-overlay');
   const drawerLinks = document.querySelectorAll('.drawer-nav a');
 
+  // Initial state: ensure drawer is not keyboard-focusable offscreen
+  if (drawer) {
+    drawer.setAttribute('inert', '');
+    drawer.setAttribute('aria-hidden', 'true');
+  }
+
+  function getFocusableElements() {
+    if (!drawer) return [];
+    return Array.from(drawer.querySelectorAll('button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'));
+  }
+
   function openDrawer() {
     if (!drawer) return;
+    drawer.removeAttribute('inert');
+    drawer.setAttribute('aria-hidden', 'false');
     drawer.classList.add('is-open');
     if (toggleBtn) {
       toggleBtn.setAttribute('aria-expanded', 'true');
     }
     document.body.classList.add('drawer-locked');
 
-    // Focus first link or close button
-    const firstFocusable = drawer.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-    if (firstFocusable) {
-      firstFocusable.focus();
+    // Focus first focusable element inside drawer (close button or first link)
+    const focusable = getFocusableElements();
+    if (focusable.length > 0) {
+      focusable[0].focus();
     }
   }
 
   function closeDrawer() {
     if (!drawer) return;
     drawer.classList.remove('is-open');
+    drawer.setAttribute('inert', '');
+    drawer.setAttribute('aria-hidden', 'true');
     if (toggleBtn) {
       toggleBtn.setAttribute('aria-expanded', 'false');
       toggleBtn.focus();
@@ -62,14 +77,43 @@ export function initNavigation() {
     link.addEventListener('click', closeDrawer);
   });
 
-  // Close on Escape key
+  // Focus trap and Escape key dismissal for open mobile drawer
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && drawer && drawer.classList.contains('is-open')) {
+    if (!drawer || !drawer.classList.contains('is-open')) return;
+
+    if (e.key === 'Escape') {
       closeDrawer();
+      return;
+    }
+
+    if (e.key === 'Tab') {
+      const focusable = getFocusableElements();
+      if (focusable.length === 0) return;
+      const firstElement = focusable[0];
+      const lastElement = focusable[focusable.length - 1];
+
+      // If focus is currently outside the drawer, immediately pull it into the drawer
+      if (!drawer.contains(document.activeElement)) {
+        e.preventDefault();
+        firstElement.focus();
+        return;
+      }
+
+      if (e.shiftKey) {
+        if (document.activeElement === firstElement) {
+          e.preventDefault();
+          lastElement.focus();
+        }
+      } else {
+        if (document.activeElement === lastElement) {
+          e.preventDefault();
+          firstElement.focus();
+        }
+      }
     }
   });
 
-  // Smooth scrolling for anchor links with header offset
+  // Smooth scrolling for anchor links with header offset and reduced-motion support
   document.addEventListener('click', (e) => {
     const anchor = e.target.closest('a[href^="#"]');
     if (!anchor) return;
@@ -82,10 +126,11 @@ export function initNavigation() {
       const headerOffset = 80;
       const elementPosition = target.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: isReducedMotion ? 'auto' : 'smooth'
       });
 
       // Update URL hash
