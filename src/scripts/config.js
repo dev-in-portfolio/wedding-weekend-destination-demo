@@ -60,5 +60,5 @@ export const CONFIG = {
       roomBlock: 'Group Block: DSCG-SOLENNE'
     }
   ],
-  PORTAL_URL: 'https://dscg-wedding-portal.netlify.app'
+  PORTAL_URL: 'https://wedding-portal.darkstarconsultinggroup.com'
 };
